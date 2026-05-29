@@ -5,6 +5,7 @@
   "dependencies": {
     "@expo/html-elements": "^56.0.1",
     "@expo/ui": "~56.0.14",
+    "@expo/vector-icons": "^15.0.2",
     "@gluestack-ui/core": "^3.0.22",
     "@gluestack-ui/utils": "^3.0.21",
     "@gluestack/ui-next-adapter": "^3.0.3",
@@ -16,6 +17,7 @@
     "expo-font": "~56.0.5",
     "expo-glass-effect": "~56.0.4",
     "expo-image": "~56.0.9",
+    "expo-linear-gradient": "~56.0.4",
     "expo-linking": "~56.0.12",
     "expo-router": "~56.2.7",
     "expo-secure-store": "~56.0.4",
@@ -35,7 +37,7 @@
     "react-native-screens": "4.25.2",
     "react-native-svg": "^15.15.5",
     "react-native-web": "^0.21.2",
-    "react-native-worklets": "^0.9.1",
+    "react-native-worklets": "0.8.3",
     "tailwindcss": "^3.4.19"
   },
   "devDependencies": {
