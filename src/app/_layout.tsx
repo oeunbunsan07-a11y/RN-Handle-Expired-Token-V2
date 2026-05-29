@@ -1,10 +1,12 @@
 // app/_layout.tsx
-import { AuthProvider, useAuth } from '@/contexts/auth-context';
+import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
 import { Stack, useRouter, useSegments } from 'expo-router';
 import { useEffect } from 'react';
+import "../../global.css";
+import { AuthProvider, useAuth } from '../contexts/auth-context';
 
 function App() {
-  const { token } : any = useAuth();
+  const { token }: any = useAuth();
   const segments = useSegments();
   const router = useRouter();
 
@@ -27,7 +29,9 @@ function App() {
 export default function RootLayout() {
   return (
     <AuthProvider>
-      <App />
+      <GluestackUIProvider>
+        <App />
+      </GluestackUIProvider>
     </AuthProvider>
   );
 }

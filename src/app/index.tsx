@@ -1,10 +1,11 @@
 import { useRouter } from "expo-router";
 import { useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
 import { useAuth } from "../contexts/auth-context"; // Adjust this import path to your project structure
 
-export default function Index() { 
-  const { token } : any = useAuth();
+import HomeScreen from "@/screens/home-screen";
+
+export default function Index() {
+  const { token }: any = useAuth();
   const router = useRouter();
 
   useEffect(() => {
@@ -23,24 +24,5 @@ export default function Index() {
     return null;
   }
 
-  return (
-    <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+  return <HomeScreen />
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "red",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  loadingContainer: {
-    flex: 1,
-    backgroundColor: "#ffffff", // Keeps it neutral while checking authentication
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});

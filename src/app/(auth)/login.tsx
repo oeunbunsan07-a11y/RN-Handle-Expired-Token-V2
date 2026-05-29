@@ -1,4 +1,5 @@
 import { authService } from '@/apis/auth-service';
+import CusActionSheet from '@/components/customs/cus-action-sheet';
 import { useAuth } from '@/contexts/auth-context';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
@@ -109,6 +110,8 @@ const Login = () => {
               <Text style={styles.signup}> Sign Up</Text>
             </TouchableOpacity>
           </View>
+
+          <CusActionSheet />
         </View>
       </KeyboardAvoidingView>
     </SafeAreaView>
